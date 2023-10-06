@@ -5,8 +5,9 @@
   }
   
   :root {
-    --gray-900: #121214;
-    --gray-300: #444448;
+    --black: black;
+    --gray-300: #dbdbdb;
+    --gray-esc: gray;
   
     --primary-200: #fcd085;
     --primary-400: #ffbc48;
@@ -36,15 +37,16 @@
   
   header {
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
   
-    padding: 3.2rem;
+    padding: 2rem;
   
     max-width: 46rem;
     margin: auto;
   }
   
   h1 {
+    color: white;
     opacity: .9;
   }
   
@@ -57,11 +59,11 @@
     padding: 1rem 1.6rem;
     border-radius: .8rem;
   
-    background-color: #444448;
+    background-color: var(--gray-300);
     border: 0;
   
     width: 100%;
-    color: white;
+    color: rgb(0, 0, 0);
   
     font-size: 1.6rem;
   }
@@ -74,8 +76,17 @@
   
   main {
     padding-inline: 3.2rem;
-    max-width: 70rem;
-    margin: 3.2rem auto;
+    max-width: 100rem;
+    margin: 1.2rem auto;
+  }
+
+  img {
+    width: 8rem;
+    mix-blend-mode: multiply;
+  }
+
+  img:hover {
+    opacity: 0.6;
   }
   
   ul {
@@ -87,8 +98,8 @@
   }
   
   ul:has(li:hover) li:not(:hover) {
-    opacity: .6;
-    scale: .98;
+    opacity: .2;
+    scale: .96;
   }
   
   li {
@@ -96,7 +107,7 @@
     background-color: var(--gray-300);
     padding: 2.8rem;
     border-radius: .8rem;
-    color: white;
+    color: rgb(0, 0, 0);
   
     transition: all .2s;
   }
@@ -116,18 +127,13 @@
     padding: .4rem;
   }
   
-  li h2 {
-    opacity: .9;
-  }
-  
   li p {
-    margin-top: 1.6rem;
-    opacity: .5;
+    margin-top: 1.4rem;
   }
   
   li a {
     display: inline-block;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-top: 1.6rem;
     font-weight: bold;
     text-decoration: none;
@@ -136,7 +142,7 @@
   }
   
   li a:hover {
-    color: var(--primary-200);
+    color: var(--gray-esc);
   }
   
   @media (max-width: 36rem) {
